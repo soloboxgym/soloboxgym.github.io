@@ -31,13 +31,13 @@
                 <p><strong>Nuestro gimnasio, establecido en 2015.</u></strong></p>
                 
                 <div class="gym-gallery">
-                    <a href="gimnasio1.jpeg" target="_blank" rel="noopener noreferrer">
+                    <a href="gimnasio1.jpeg" aria-label="Ver imagen del gimnasio 1">
                         <img src="gimnasio1.jpeg" alt="Gimnasio Solo Box Gym 1" />
                     </a>
-                    <a href="gimnasio2.jpeg" target="_blank" rel="noopener noreferrer">
+                    <a href="gimnasio2.jpeg" aria-label="Ver imagen del gimnasio 2">
                         <img src="gimnasio2.jpeg" alt="Gimnasio Solo Box Gym 2" />
                     </a>
-                    <a href="gimnasio3.jpeg" target="_blank" rel="noopener noreferrer">
+                    <a href="gimnasio3.jpeg" aria-label="Ver imagen del gimnasio 3">
                         <img src="gimnasio3.jpeg" alt="Gimnasio Solo Box Gym 3" />
                     </a>
                 </div>
@@ -72,6 +72,48 @@
 				<small>&copy; "SOLO BOX GYM"</small>
 			</div>
 		</footer>
+
+        <div class="image-overlay" id="imageOverlay" aria-hidden="true">
+            <button class="close-overlay" type="button" aria-label="Cerrar imagen">×</button>
+            <img id="overlayImage" src="" alt="" />
+        </div>
+
+        <script>
+            const overlay = document.getElementById('imageOverlay');
+            const overlayImage = document.getElementById('overlayImage');
+            const galleryLinks = document.querySelectorAll('.gym-gallery a');
+            const closeButton = document.querySelector('.close-overlay');
+
+            function closeOverlay() {
+                overlay.classList.remove('active');
+                overlay.setAttribute('aria-hidden', 'true');
+                overlayImage.src = '';
+                overlayImage.alt = '';
+            }
+
+            galleryLinks.forEach((link) => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    overlayImage.src = link.href;
+                    overlayImage.alt = link.querySelector('img').alt;
+                    overlay.classList.add('active');
+                    overlay.setAttribute('aria-hidden', 'false');
+                });
+            });
+
+            closeButton.addEventListener('click', closeOverlay);
+            overlay.addEventListener('click', (event) => {
+                if (event.target === overlay) {
+                    closeOverlay();
+                }
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && overlay.classList.contains('active')) {
+                    closeOverlay();
+                }
+            });
+        </script>
 
 	</body>
 </html>

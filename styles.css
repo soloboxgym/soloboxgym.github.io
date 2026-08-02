@@ -16,22 +16,6 @@ body {
     max-width: 1100px;
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 0 16px;
-        box-sizing: border-box;
-    }
-
-    * {
-        font-size: 18px;
-    }
-
-    .benefits-list li strong {
-        font-size: 16px;
-    }
-}
-
 .logo-container {
     display: block;
     float: left;
@@ -144,6 +128,12 @@ nav li a {
     margin-bottom: 24px;
 }
 
+.gym-gallery a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
 .gym-gallery img {
     display: block;
     width: 100%;
@@ -151,6 +141,57 @@ nav li a {
     object-fit: cover;
     border-radius: 14px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.gym-gallery a:hover img,
+.gym-gallery a:focus img {
+    transform: scale(1.02);
+}
+
+.image-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 1000;
+}
+
+.image-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image-overlay img {
+    display: block;
+    max-width: min(90vw, 1000px);
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+}
+
+.close-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
 }
 
 .teachers-grid {
@@ -239,4 +280,49 @@ footer {
     border-top: 2px solid #fff;
     position: relative;
     padding: 8px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    * {
+        font-size: 18px;
+    }
+
+    .benefits-list li strong {
+        font-size: 16px;
+    }
+
+    .gym-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .gym-gallery img {
+        height: 180px;
+    }
+
+    .teacher-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .teacher-card img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gym-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gym-gallery img {
+        height: 220px;
+    }
 }
