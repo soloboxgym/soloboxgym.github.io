@@ -1,34 +1,73 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <style>
-     body {
-       font-family: Tahoma;
-       font-size: 30px;
-       color: #FFF;
-       background-color: #000;
-     }
-     a {
-         color: #FFF;
-     }
-    </style>
-    <title>Solo Box Gym - Gimnasio y Escuela de Boxeo</title>
-  </head>
-  <body>
-    👇 ELEGÍ UN TURNO DE LA GRILLA, PARA HACER LA CLASE DE PRUEBA GRATIS 👇<br/>
-    <img src="horarios.png" /><br/><br/>
-    
-    🥊 <b>La cuota mensual es única de <u>$50,000 pesos</u>.</b><br/>
-    🥊 Las clases son <u>mixtas, para todas las edades, todos los niveles</u>.<br/>
-    🥊 Podes ir a <u>todas las clases de la grilla</u>, todas las veces que quieras.<br/><br/>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>SOLO BOX GYM</title>
+		<meta name="description" content="Solo Box Gym - gimnasio de boxeo en la ciudad de Buenos Aires.">
+		<link rel="stylesheet" href="./styles.css">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+                <div class="logo-container">
+                    <img src="letras.png" class="letras" />
+                    <img src="logo.png" class="personaje" />
+                </div>
 
-    🕓 Elegís un turno de la grilla de horarios 👆 y pasás a hacer <u>la primer clase de prueba, que es gratis!</u><br/><br/>
+                <nav>
+					<ul>
+						<li><a href="nuevo.html">CLASES</a></li>
+						<li><a href="gimnasio.html">GIMNASIO</a></li>
+                        <li><a href="profesores.html">PROFESORES</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 
-    📌 La dirección es <u>Moldes 1166</u> (y Virrey Loreto), Belgrano, CABA. <a href="https://maps.app.goo.gl/mwmX92zT5rbbQYEb7">https://maps.app.goo.gl/mwmX92zT5rbbQYEb7</a><br/><br/>
-    
-    📺 <a href="https://youtube.com/@omarperromedina9232" target="_blank">Acá podés ver videos del gimnasio y las clases 👉&nbsp;https://youtube.com/@omarperromedina9232</a><br/><br/>
-    
-    💬⁉️ <a href="https://wa.me/541169424673?text=Hola! Quiero mas información sobre las clases de boxeo">Por consultas: 11-6942-4673</a>
-  </body>
+		<main>
+			<section id="clases" class="container">
+                <p><strong>Elegí un turno de la grilla, para hacer la <u>clase de prueba gratis</u></strong></p>
+                <a href="horarios2.png"><img src="horarios2.png" class="horarios" /></a>
+                
+				<ul class="benefits-list">
+                    <li><strong>La cuota mensual es única de $50,000 pesos.</strong></li>
+                    <li><strong>Las clases son mixtas, para todas las edades, todos los niveles.</strong></li>
+                    <li><strong>Podes ir a todas las clases de la grilla, todas las veces que quieras.</strong></li>
+                    <li><strong>Elegís un turno de la grilla de horarios y pasás a hacer la primer clase de prueba, que es gratis!</strong></li>
+                </ul>
+
+                <div class="map-info">
+                    <p><strong>Dirección:</strong> Moldes 1166 (y Virrey Loreto), Belgrano, Buenos Aires</p>
+                    <a href="https://maps.google.com/?q=SOLO%20BOX%20GYM%20Moldes%201166%2C%20Buenos%20Aires" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
+                </div>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps?q=SOLO%20BOX%20GYM%20Moldes%201166%2C%20Buenos%20Aires&z=15&output=embed"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación del gimnasio Solo Box Gym en Moldes 1166, Buenos Aires">
+                    </iframe>
+                </div>
+
+				<ul class="benefits-list">
+					<li><strong>Acá podés ver videos del gimnasio y las clases: <a href="https://youtube.com/@omarperromedina9232" target="_blank" rel="noopener noreferrer">YT @omarperromedina9232</a></strong></li>
+					<li><strong>Por consultas:<br/>11-6942-4673</strong></li>
+				</ul>
+			</section>
+		</main>
+
+		<footer>
+			<div class="container">
+				<small>&copy; "SOLO BOX GYM"</small>
+			</div>
+		</footer>
+
+	</body>
 </html>
