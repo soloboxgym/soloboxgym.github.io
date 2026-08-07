@@ -10,6 +10,24 @@
 
 			gtag('config', 'G-9F7J2KMMBW');
 		</script>
+
+        <!-- Event snippet for Contact conversion page
+        In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+        <script>
+        function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+            window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18218981893/f8vsCNeA7d0cEIW0vu9D',
+            'event_callback': callback
+        });
+        return false;
+        }
+        </script>
+
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>SOLO BOX GYM</title>
@@ -26,11 +44,11 @@
                 </div>
 
                 <div class="top-info-bar">
-                    <a class="top-info-item" href="https://maps.google.com/?q=SOLO%20BOX%20GYM%20Moldes%201166%2C%20Buenos%20Aires" target="_blank" rel="noopener noreferrer">
+                    <a class="top-info-item" href="https://maps.google.com/?q=SOLO%20BOX%20GYM%20Moldes%201166%2C%20Buenos%20Aires" target="_blank" rel="noopener noreferrer" onclick="gtag_report_conversion()">
                         <span class="top-info-icon">📍</span>
                         <span>Moldes 1166</span>
                     </a>
-                    <a class="top-info-item" href="https://wa.me/541169424673?text=Hola%20quiero%20consultar%20por%20las%20clases%20de%20Solo%20Box%20Gym" target="_blank" rel="noopener noreferrer">
+                    <a class="top-info-item" href="https://wa.me/541169424673?text=Hola%20quiero%20consultar%20por%20las%20clases%20de%20Solo%20Box%20Gym" target="_blank" rel="noopener noreferrer" onclick="gtag_report_conversion()">
                         <span class="top-info-icon">💬</span>
                         <span>11-6942-4673</span>
                     </a>
