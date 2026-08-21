@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9F7J2KMMBW"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-9F7J2KMMBW');
+		</script>
+
+		<!-- Event snippet for Contact conversion page
+        In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+        <script>
+        function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+            window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18218981893/f8vsCNeA7d0cEIW0vu9D',
+            'event_callback': callback
+        });
+        return false;
+        }
+        </script>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>SOLO BOX GYM</title>
+		<meta name="description" content="Solo Box Gym - gimnasio de boxeo en la ciudad de Buenos Aires.">
+		<link rel="stylesheet" href="./styles.css">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+                <div class="logo-container">
+                    <img src="letras.png" class="letras" />
+                    <img src="logo.png" class="personaje" />
+                </div>
+
+				<div class="top-info-bar">
+                    <a class="top-info-item" href="https://maps.google.com/?q=SOLO%20BOX%20GYM%20Moldes%201166%2C%20Buenos%20Aires" target="_blank" rel="noopener noreferrer" onclick="gtag_report_conversion()">
+                        <span class="top-info-icon">📍</span>
+                        <span>Moldes 1166</span>
+                    </a>
+                    <a class="top-info-item" href="https://wa.me/541169424673?text=Hola%20quiero%20consultar%20por%20las%20clases%20de%20Solo%20Box%20Gym" target="_blank" rel="noopener noreferrer" onclick="gtag_report_conversion()">
+                        <span class="top-info-icon">💬</span>
+                        <span>11-6942-4673</span>
+                    </a>
+                </div>
+
+                <nav>
+					<ul>
+						<li><a href="index.html">CLASES</a></li>
+						<li><a href="gimnasio.html">GIMNASIO</a></li>
+                        <li><a href="profesores.html">PROFESORES</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section id="clases" class="container">
+                <div class="teachers-description-card">
+                    <h2>Acerca de nuestro programa de referidos</h2>
+
+                    <div class="teachers-list">
+                        <article class="teacher-summary">
+                            <h3>Hacé tu propia publicidad o difusión en Instagram, Facebook, YouTube</h3>
+                            <p>Corre por cuenta tuya cómo obtenes los usuarios y por qué medios (redes sociales, campañas de e-mail, volantes, etc)</p>
+                        </article>
+                        
+                        <article class="teacher-summary">
+                            <h3>Siempre usá el código de referido que te otorgamos</h3>
+                            <p>Contactános para que te demos de alta en el programa. De esta forma vas a obtener tu código de referido para que tus referidos siempre lo mencionen al venir al gimnasio</p>
+                        </article>
+                        
+                        <article class="teacher-summary">
+                            <h3>No olvides aclarar que mencionando tu código de referido, tienen la primer clase gratis!</h3>
+                            <p>Siempre incluí esta información y tu código de referido en tu difusión o publicidad</p>
+                        </article>
+                        
+                        <article class="teacher-summary">
+                            <h3>Por cada alumno nuevo que traigas al gimnasio, recibís un 30% del pago de su primer cuota</h3>
+                            <p>Al recibir el primer pago de cada alumno nuevo que ingrese al gimnasio, te vamos a estar enviando el 30% correspondiente. Por ejemplo si la primer cuota es de $60,000 vas a estar recibiendo $18,000.</p>
+                        </article>
+                        
+
+                    </div>
+                                
+                <br/>
+                <img src="referidos.png" class="horarios" />
+
+                <div class="map-info">
+                    <p><strong>Dirección:</strong> Moldes 1166 (y Virrey Loreto), Belgrano, Buenos Aires</p>
+                    <a href="https://maps.google.com/?q=SOLO%20BOX%20GYM%20Moldes%201166%2C%20Buenos%20Aires" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
+                </div>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps?q=SOLO%20BOX%20GYM%20Moldes%201166%2C%20Buenos%20Aires&z=15&output=embed"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación del gimnasio Solo Box Gym en Moldes 1166, Buenos Aires">
+                    </iframe>
+                </div>
+
+				<ul class="benefits-list">
+					<li><strong>Acá podés ver videos del gimnasio y las clases: <a href="https://youtube.com/@omarperromedina9232" target="_blank" rel="noopener noreferrer">YT @omarperromedina9232</a></strong></li>
+					<li><strong>Por consultas:<br/>11-6942-4673</strong></li>
+				</ul>
+			</section>
+		</main>
+
+		<footer>
+			<div class="container">
+				<small>&copy; "SOLO BOX GYM"</small>
+			</div>
+		</footer>
+
+	</body>
+</html>
